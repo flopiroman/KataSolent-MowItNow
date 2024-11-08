@@ -74,4 +74,12 @@ public class MavenTemplateRepositoryTest {
         assertEquals("0 1 E", MavenTemplateRepository.runActions(initializer, false)) ;
     }
 
+    @Test
+    public void testSample() {
+        Initializer initializer = new Initializer(5, 5);
+        initializer.addInstruction(new Instruction(1, 2, 'N', "GAGAGAGAA"));
+        initializer.addInstruction(new Instruction(3, 3, 'E', "AA DAADADDA"));
+        assertEquals("1 3 N 1 5 E", MavenTemplateRepository.runActions(initializer, false)) ;
+    }
+
 }

@@ -17,26 +17,20 @@ public class Mower {
     private int xAxis;
     private int yAxis;
     private Orientation orientation;
-    private static final Map<Character, MowerAction> actions = new HashMap<>();
+    private final Map<Character, MowerAction> actions;
 
     /**
      * @param xAxis initial position on xAxis
      * @param yAxis initial position on yAxis
      * @param orientation initial orientation
      */
-    public Mower(int xAxis, int yAxis, Orientation orientation) {
+    public Mower(int xAxis, int yAxis, Orientation orientation, Map<Character, MowerAction> actions) {
         this.orientation = orientation;
         this.xAxis = xAxis;
         this.yAxis = yAxis;
+        this.actions = actions;
     }
 
-
-    // Action list
-    static {
-        actions.put('G', new TurnLeftAction());
-        actions.put('D', new TurnRightAction());
-        actions.put('A', new MoveForwardAction());
-    }
 
     public void moveMower(Character action, Lawn lawn) {
         MowerAction mowerAction = actions.get(action);

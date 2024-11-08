@@ -1,7 +1,12 @@
 package com.github.romankh3.maventemplaterepository;
 
+import com.github.romankh3.maventemplaterepository.model.ActionsRegistry;
 import com.github.romankh3.maventemplaterepository.model.Lawn;
 import com.github.romankh3.maventemplaterepository.model.Mower;
+import com.github.romankh3.maventemplaterepository.model.mowerActions.MoveForwardAction;
+import com.github.romankh3.maventemplaterepository.model.mowerActions.MowerAction;
+import com.github.romankh3.maventemplaterepository.model.mowerActions.TurnLeftAction;
+import com.github.romankh3.maventemplaterepository.model.mowerActions.TurnRightAction;
 import com.github.romankh3.maventemplaterepository.utils.Initializer;
 import com.github.romankh3.maventemplaterepository.utils.Instruction;
 
@@ -9,7 +14,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Main class for Java Repository Template.
@@ -30,7 +37,13 @@ public class MavenTemplateRepository {
         StringBuilder builder = new StringBuilder("");
         Lawn lawn = new Lawn(initializer.getMaxLawnXAxis(), initializer.getMaxLawnYAxis());
         initializer.getInstructions().forEach(instruction -> {
-            Mower mower = new Mower(instruction.getXAxis(), instruction.getYAxis(), instruction.getOrientation());
+            Mower mower = new Mower(
+                instruction.getXAxis(),
+                instruction.getYAxis(),
+                instruction.getOrientation(),
+                ActionsRegistry.getActions()
+            );
+
             for (Character character: instruction.getActions().toCharArray()) {
                 mower.moveMower(character, lawn);
             }
