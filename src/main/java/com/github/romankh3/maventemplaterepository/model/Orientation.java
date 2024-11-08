@@ -1,7 +1,7 @@
 package com.github.romankh3.maventemplaterepository.model;
 
 /**
- * @author Florian A.
+ * @author: Florian A.
  */
 public enum Orientation {
     N("N"), //North

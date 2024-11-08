@@ -3,10 +3,6 @@ package com.github.romankh3.maventemplaterepository;
 import com.github.romankh3.maventemplaterepository.model.ActionsRegistry;
 import com.github.romankh3.maventemplaterepository.model.Lawn;
 import com.github.romankh3.maventemplaterepository.model.Mower;
-import com.github.romankh3.maventemplaterepository.model.mowerActions.MoveForwardAction;
-import com.github.romankh3.maventemplaterepository.model.mowerActions.MowerAction;
-import com.github.romankh3.maventemplaterepository.model.mowerActions.TurnLeftAction;
-import com.github.romankh3.maventemplaterepository.model.mowerActions.TurnRightAction;
 import com.github.romankh3.maventemplaterepository.utils.Initializer;
 import com.github.romankh3.maventemplaterepository.utils.Instruction;
 
@@ -14,12 +10,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
- * Main class for Java Repository Template.
+ * @author: Florian A.
  */
 public class MavenTemplateRepository {
 

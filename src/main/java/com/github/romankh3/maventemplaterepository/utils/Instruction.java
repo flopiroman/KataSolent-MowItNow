@@ -3,7 +3,7 @@ package com.github.romankh3.maventemplaterepository.utils;
 import com.github.romankh3.maventemplaterepository.model.Orientation;
 
 /**
- * @author Florian A.
+ * @author: Florian A.
  * Corresponding to mower's initial position + a list of actions (saved as a string)
  * Fields are final because we don't want to allow updating them
  */
