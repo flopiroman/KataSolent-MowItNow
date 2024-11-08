@@ -1,17 +1,24 @@
 ## Overview
-Repository with preconfigured maven project with junit5 configuration on a board.
+Kata project for SOLENT.
+This is a basic project about moving some mower on a lawn in order to mow it.
+There could be a lot of improvements such as handling exceptions 
 
 ## Building
-...
+`mvn clean package`
+
+## Run project
+
+`mvn exec:java -Dexec.mainClass="com.github.romankh3.maventemplaterepository.MavenTemplateRepository" -Dexec.args="filename.txt"`
+
 
 ## Troubleshooting
-...
+
 
 ## Release Notes
 Can be found in [RELEASE_NOTES](RELEASE_NOTES.md).
 
 ## Authors
-* Roman Beskrovnyi - [romankh3](https://github.com/romankh3)
+* Florian AINADOU - [flopiroman](https://github.com/flopiroman)
 
 ## Acknowledgments
 ...
